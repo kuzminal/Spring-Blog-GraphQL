@@ -2,7 +2,7 @@
 
 Для создания поста и\или автора можно использовать следующий mutation:
 
-```json
+```graphql
 mutation {
   newPost(input:{
     title: "Simple post"
@@ -24,7 +24,7 @@ mutation {
 
 Для поиска можно использовать следующий пример query:
 
-```json
+```graphql
 {
   recentPosts(limit: 0, offset: 5, orderBy: "id") {
     id
