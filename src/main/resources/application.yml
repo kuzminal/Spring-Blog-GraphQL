@@ -1,0 +1,24 @@
+server:
+  port: 8080
+  servlet:
+    contextPath: /blog
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/eblog
+    username: user
+    password: password
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate.ddl-auto: create
+    show-sql: true
+    generate-ddl: true
+graphql:
+  servlet:
+    mapping: /graphql
+    enabled: true
+    corsEnabled: true
+graphiql:
+  mapping: /graphiql
+  endpoint: /blog/graphql
+  enabled: true
+  pageTitle: GraphiQL
